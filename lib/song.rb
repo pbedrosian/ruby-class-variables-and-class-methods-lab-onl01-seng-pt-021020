@@ -22,4 +22,5 @@ class Song
 
   def self.artist
     @@artists.uniq!
+  end
 end
