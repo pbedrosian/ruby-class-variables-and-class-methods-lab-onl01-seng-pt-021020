@@ -18,7 +18,7 @@ class Song
 attr_accessor :name, :artist, :genre #this sets the name, artist, and genre setter/getter
 
   def self.genres
-    @@genres.uniq!
+    @@genres.uniq! #uniq! removes the duplicates
   end
 
   def self.artists
@@ -26,7 +26,7 @@ attr_accessor :name, :artist, :genre #this sets the name, artist, and genre sett
   end
 
   def self.genre_count
-    Hash[@@genres.group_by{|x|x}.map{|x,y|[x,y.size]}]
+    Hash[@@genres.group_by{|x|x}.map{|x,y|[x,y.size]}] #not sure how this code works. Need help 
   end
 
   def self.artist_count
